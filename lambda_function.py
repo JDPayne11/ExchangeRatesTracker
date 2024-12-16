@@ -1,7 +1,7 @@
 from datetime import datetime
-from config import get_config, get_secret
-from utils import get_exchange_rates
-from handlers import send_email
+from func_py.config import get_config, get_secret
+from func_py.utils import get_exchange_rates
+from func_py.handlers import send_email
 
 def lambda_handler(event, context):
 
