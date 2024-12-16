@@ -1,1 +1,3 @@
-env_ExchangeRates/*
+env_ExchangeRates/
+.env
+__pycache__
