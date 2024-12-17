@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.13.1
+    commands:
+      - pip install -r requirements.txt  # Install dependencies
+  build:
+    commands:
+      # Zip the Lambda function, excluding non-essential files
+      - zip -r lambda_function.zip . -x ".gitignore" -x "*.yml" -x "*.md"
+artifacts:
+  files:
+    - lambda_function.zip
