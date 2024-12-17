@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       # Zip the Lambda function, excluding non-essential files
-      - zip -r lambda_function.zip . -x ".gitignore" -x "*.yml" -x "*.md"
+      - zip -r lambda_function.zip . -x ".gitignore" -x "*.yml" -x "*.md" -x "*.txt"
 artifacts:
   files:
     - lambda_function.zip
