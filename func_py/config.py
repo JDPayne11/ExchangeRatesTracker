@@ -12,7 +12,7 @@ def get_config():
             'RECEIVER_EMAIL': os.getenv('RECEIVER_EMAIL'),
             'APP_ID': os.getenv('APP_ID'),
             'APIKEY': os.getenv('APIKEY'),
-            'AWS_REGION': os.getenv('AWS_REGION'),
+            'AWS_REGION_NAME': os.getenv('AWS_REGION'),
             'AWS_SECRET_NAME': os.getenv('AWS_SECRET_NAME')
         }
     else:
@@ -24,7 +24,7 @@ def get_config():
             'RECEIVER_EMAIL': os.getenv('RECEIVER_EMAIL'),
             'APP_ID': os.getenv('APP_ID'),
             'APIKEY': os.getenv('APIKEY'),
-            'AWS_REGION': os.getenv('AWS_REGION'),
+            'AWS_REGION_NAME': os.getenv('AWS_REGION'),
             'AWS_SECRET_NAME': os.getenv('AWS_SECRET_NAME')
         }
     
@@ -32,7 +32,7 @@ def get_config():
 def get_secret(config):
 
     secret_name = config["AWS_SECRET_NAME"]
-    region_name = config["AWS_REGION"]
+    region_name = config["AWS_REGION_NAME"]
     sender_email = config["SENDER_EMAIL"]
     receiver_email = config["RECEIVER_EMAIL"]
     app_id = config["APP_ID"]
